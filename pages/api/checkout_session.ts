@@ -2,6 +2,8 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { Stripe } from 'stripe'
 import { urlFor } from '@lib'
 
+console.log(process.env.STRIPE_SECRET, '***')
+
 const stripe = new Stripe(process.env.STRIPE_SECRET!, {
   apiVersion: '2022-08-01',
 })
